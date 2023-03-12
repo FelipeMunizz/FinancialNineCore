@@ -20,7 +20,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer(ObterConnectionString());
+            optionsBuilder.UseSqlServer(GetConnectionString());
             base.OnConfiguring(optionsBuilder);
         }
     }
@@ -34,7 +34,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     #endregion
 
     #region Metodos Nativos
-    public string ObterConnectionString()
+    public string GetConnectionString()
     {
         return "Data Source=DESKTOP-10DDISU;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
     }

@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Configuracao\" />
-    <Folder Include="Repositorio\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
   </ItemGroup>
 
