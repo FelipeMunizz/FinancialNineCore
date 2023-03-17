@@ -7,6 +7,7 @@ namespace Infra.Configuracao;
 public class AppDbContext : IdentityDbContext<ApplicationUser>
 {
     public AppDbContext(DbContextOptions options ) : base( options ){}
+    public AppDbContext(){}
 
     #region Entidades
     public DbSet<SistemaFinanceiro> SistemaFinanceiro { get; set; }
