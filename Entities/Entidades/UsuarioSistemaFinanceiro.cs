@@ -3,7 +3,7 @@
 namespace Entities.Entidades;
 
 [Table("UsuarioSistemaFinanceiro")]
-public class UsuarioSistemaFinanceiro
+public class UsuarioSistemaFinanceiro 
 {
     public int Id { get; set; }
     public string? EmailUsuario { get; set; }

@@ -1,6 +1,9 @@
-﻿namespace Domain.Interfaces.InterfaceServicos
+﻿using Entities.Entidades;
+
+namespace Domain.Interfaces.InterfaceServicos;
+
+public interface ICategoriaServico
 {
-    public interface ICategoriaServico
-    {
-    }
+    Task AdicionarCategoria(Categoria categoria);
+    Task AutalizarCategoria(Categoria categoria);
 }

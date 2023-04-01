@@ -1,6 +1,8 @@
-﻿namespace Domain.Interfaces.InterfaceServicos
+﻿using Entities.Entidades;
+
+namespace Domain.Interfaces.InterfaceServicos;
+
+public interface IUsuarioSistemaFinanceiroServico
 {
-    public interface IUsuarioSistemaFinanceiroServico
-    {
-    }
+    Task CadastraUsuarioSistema(UsuarioSistemaFinanceiro usuarioSistemaFinanceiro);
 }
