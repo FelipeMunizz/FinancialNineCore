@@ -26,11 +26,6 @@ public class UsersController : ControllerBase
     [HttpPost("CreateUser")]
     public async Task<IActionResult> CreateUser([FromBody] LoginDTO login)
     {
-        if(!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
-
         ApplicationUser user = new ApplicationUser
         {
             Email = login.Email,
@@ -57,5 +52,29 @@ public class UsersController : ControllerBase
             return Ok("Usuario Adicionado");
         else
             return BadRequest("Erro ao confirmar cadastro");
+    }
+
+    [Authorize(AuthenticationSchemes = "Bearer")]
+    [Produces("application/json")]
+    [HttpPut("EditUser/{id}")]
+    public async Task<IActionResult> EditUser(string id, [FromBody] LoginDTO login)
+    {
+        var user = await _user.FindByIdAsync(id);
+
+        if (user == null)
+            return BadRequest("Usuario não encontrado");
+
+        user.Email = login.Email;
+        user.UserName = login.Email;
+        user.CPF = login.CPF;
+
+        var result = await _user.UpdateAsync(user);
+
+        if (result.Succeeded)
+        {
+            return Ok("Usuário atualizado com sucesso.");
+        }
+        else
+            return BadRequest("Erro ao atualizar usuário.");
     }
 }

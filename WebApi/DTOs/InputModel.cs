@@ -5,10 +5,10 @@ namespace WebApi.DTOs
 {
     public class InputModel
     {
-        [Required]
+        [Required(ErrorMessage = "Informe email")]
         [EmailAddress]
         public string? Email { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Informe senha")]
         public string? Password { get; set; }
     }
 }

@@ -25,11 +25,6 @@ public class AccountController : ControllerBase
     [HttpPost("CreateToken")]
     public async Task<IActionResult> CreateToken([FromBody]InputModel model)
     {
-        if (!ModelState.IsValid)
-        {
-            return Unauthorized();
-        }
-
         var result = await _sign.PasswordSignInAsync(model.Email, model.Password, false, lockoutOnFailure: false);
         if (result.Succeeded)
         {
