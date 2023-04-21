@@ -46,7 +46,7 @@ builder.Services.AddSingleton<IUsuarioSistemaFinanceiroServico, UsuarioSistemaFi
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiCorteAgendado", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiFinancialNineCore", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
         Name = "Authorization",
