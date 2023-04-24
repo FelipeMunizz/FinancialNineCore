@@ -59,10 +59,10 @@ public class UsuarioSistemaFinanceiroController : ControllerBase
             var userSystem = await _repositorio.GetEntityById(idUsuario);
             await _repositorio.Delete(userSystem);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            return NotFound(ex.Message);
+            return NotFound(false);
         }
-        return Ok("Usuario deletado com sucesso");
+        return Ok(true);
     }
 }

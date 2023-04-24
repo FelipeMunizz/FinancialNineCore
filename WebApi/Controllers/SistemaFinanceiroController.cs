@@ -56,10 +56,17 @@ public class SistemaFinanceiroController : ControllerBase
     [Produces("application/json")]
     public async Task<IActionResult> DeletarSistemaFinanceiro(int id)
     {
-        var system = await _repositorio.GetEntityById(id);
+        try
+        {
+            var system = await _repositorio.GetEntityById(id);
 
-        await _repositorio.Delete(system);
+            await _repositorio.Delete(system);
 
-        return Ok("Sistema financeiro deletado com sucesso");
+            return Ok(true);
+        }
+        catch (Exception)
+        {
+            return BadRequest(false);
+        }
     }
 }
