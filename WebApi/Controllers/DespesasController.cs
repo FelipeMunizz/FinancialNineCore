@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
 
-[Authorize(AuthenticationSchemes = "Bearer")]
+//[Authorize(AuthenticationSchemes = "Bearer")]
 [Route("api/[controller]")]
 [ApiController]
 public class DespesasController : ControllerBase
@@ -42,6 +42,14 @@ public class DespesasController : ControllerBase
     {
         await _service.AdicionarDespesa(despesa);
         return Ok(despesa);
+    }
+
+    [HttpPost("ImportarExtratoCSV/{idCategoria:int}")]
+    public async Task<IActionResult> ImportarExtratoCSV(IFormFile arquivo, int idCategoria)
+    {
+        using var streamReader = new StreamReader(arquivo.OpenReadStream());
+        await _service.ImportarDespeasExtratoCSV(streamReader, idCategoria);
+        return Ok();
     }
 
     [HttpPut("AtualizarDespesa")]

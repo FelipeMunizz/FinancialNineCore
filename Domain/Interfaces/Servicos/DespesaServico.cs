@@ -2,6 +2,7 @@
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
 using Entities.Enums;
+using System.Transactions;
 
 namespace Domain.Interfaces.Servicos;
 
@@ -64,5 +65,52 @@ public class DespesaServico : IDespesaServico
             despesasNaoPagasMesAnterior = despesasNaoPagasMesAnterior,
             investimentos = investimentos
         };
+    }
+
+    public async Task ImportarDespeasExtratoCSV(StreamReader streamReader, int idCategoria)
+    {
+        int n;
+        List<Despesa> despesas = new List<Despesa>();
+        using (TransactionScope scope = new TransactionScope())
+        {
+            while (!streamReader.EndOfStream)
+            {
+                var line = streamReader.ReadLine();
+                var values = line?.Split(';');
+
+                string doc = values[2];
+                if (!string.IsNullOrEmpty(doc) && int.TryParse(doc, out n))
+                {
+                    Despesa despesa = new Despesa();
+                    despesa.Ano = Convert.ToDateTime(values?[0]).Year;
+                    despesa.Mes = Convert.ToDateTime(values?[0]).Month;
+                    despesa.DataCadastro = DateTime.Now;
+                    despesa.DataPagamento = Convert.ToDateTime(values?[0]);
+                    despesa.DataVencimento = Convert.ToDateTime(values?[0]);
+                    despesa.Nome = values?[1];
+                    string credito = values[3];
+                    string debito = values[4].Replace("-", "");
+                    if (!string.IsNullOrEmpty(credito))
+                    {
+                        despesa.TipoDespesa = EnumTipoDespesa.Investimentos;                        
+                        despesa.Valor = Convert.ToDecimal(credito);
+                    }
+                    else
+                    if (!string.IsNullOrEmpty(debito))
+                    {
+                        despesa.TipoDespesa = EnumTipoDespesa.Contas;
+                        despesa.Valor = Convert.ToDecimal(debito);
+                    }
+                    despesa.Pago = true;
+                    despesa.DespesaAtrasada = false;
+                    despesa.IdCategoria = idCategoria;
+
+                    despesas.Add(despesa);
+                }
+            }
+            await _despesa.AdicionarListaDespesas(despesas);
+            scope.Complete();
+        }
+
     }
 }

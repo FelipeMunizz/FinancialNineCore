@@ -14,6 +14,18 @@ public class RepositorioDespesas : RepositorioGenerico<Despesa>, InterfaceDespes
     {
         _context = new DbContextOptions<AppDbContext>();
     }
+
+    public async Task AdicionarListaDespesas(List<Despesa> despesas)
+    {
+        using (var banco = new AppDbContext(_context))
+        {
+            foreach(Despesa despesa in despesas)
+                banco.Despesa.Add(despesa);
+
+            await banco.SaveChangesAsync();
+        }
+    }
+
     public async Task<IList<Despesa>> ListaDespesasUsuario(string emailUsuario)
     {
         using( var banco = new AppDbContext(_context))
