@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Infra",
+    "\\Infra\\Configuracao",
+    "\\Infra\\Repositorio"
   ],
-  "SelectedNode": "\\FinancialNineCore.sln",
+  "SelectedNode": "\\Infra\\Repositorio\\RepositorioUsuarioSistemaFinanceiro.cs",
   "PreviewInSolutionExplorer": false
 }

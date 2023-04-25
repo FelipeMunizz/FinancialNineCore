@@ -37,7 +37,9 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     #region Metodos Nativos
     public string GetConnectionString()
     {
-        return "Data Source=DESKTOP-10DDISU;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
+        string pcFelipe = "Data Source=DESKTOP-10DDISU;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
+        string not = "Data Source=DESKTOP-V672319\\SQLEXPRESS;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
+        return not;
     }
     #endregion    
 }
