@@ -24,3 +24,5 @@ C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\ref
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\Entities.pdb
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\Entities.genruntimeconfig.cache
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\ref\Entities.dll
+D:\Projetos\FinancialNineCore\Entities\bin\Debug\net7.0\Entities.runtimeconfig.json
+D:\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\Entities.genruntimeconfig.cache

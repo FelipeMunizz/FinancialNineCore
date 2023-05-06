@@ -3,6 +3,10 @@ using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using System.Collections.Generic;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 
 namespace WebApi.Controllers;
 
@@ -44,11 +48,28 @@ public class DespesasController : ControllerBase
         return Ok(despesa);
     }
 
-    [HttpPost("ImportarExtratoCSV/{idCategoria:int}")]
-    public async Task<IActionResult> ImportarExtratoCSV(IFormFile arquivo, int idCategoria)
+    [HttpPost("ImportarDespeasExtratoBradescoCSV/{idCategoria:int}")]
+    [Produces("application/json")]
+    public async Task<IActionResult> ImportarDespeasExtratoBradescoCSV(IFormFile arquivo, int idCategoria)
     {
         using var streamReader = new StreamReader(arquivo.OpenReadStream());
-        await _service.ImportarDespeasExtratoCSV(streamReader, idCategoria);
+        await _service.ImportarDespeasExtratoBradescoCSV(streamReader, idCategoria);
+        return Ok();
+    }
+
+    [HttpPost("ImportarDespeasExtratoItauCSV/{idCategoria:int}")]
+    [Produces("application/json")]
+    public async Task<IActionResult> ImportarDespeasExtratoItauCSV(IFormFile arquivo, int idCategoria)
+    {
+        // criar uma instância do Workbook
+        IWorkbook workbook;
+        using (Stream stream = arquivo.OpenReadStream())
+        {
+            workbook = new HSSFWorkbook(stream);
+        }
+        
+        await _service.ImportarDespeasExtratoItauCSV(workbook, idCategoria);
+        
         return Ok();
     }
 

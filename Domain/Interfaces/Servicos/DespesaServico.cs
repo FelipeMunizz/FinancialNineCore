@@ -2,6 +2,7 @@
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
 using Entities.Enums;
+using NPOI.SS.UserModel;
 using System.Transactions;
 
 namespace Domain.Interfaces.Servicos;
@@ -67,10 +68,11 @@ public class DespesaServico : IDespesaServico
         };
     }
 
-    public async Task ImportarDespeasExtratoCSV(StreamReader streamReader, int idCategoria)
+    public async Task ImportarDespeasExtratoBradescoCSV(StreamReader streamReader, int idCategoria)
     {
         int n;
-        List<Despesa> despesas = new List<Despesa>();
+        List<Despesa> despesasContas = new List<Despesa>();
+        List<Despesa> despesasInvestimentos = new List<Despesa>();
         using (TransactionScope scope = new TransactionScope())
         {
             while (!streamReader.EndOfStream)
@@ -78,7 +80,7 @@ public class DespesaServico : IDespesaServico
                 var line = streamReader.ReadLine();
                 var values = line?.Split(';');
 
-                string doc = values[2];
+                string doc = values[3];
                 if (!string.IsNullOrEmpty(doc) && int.TryParse(doc, out n))
                 {
                     Despesa despesa = new Despesa();
@@ -87,30 +89,62 @@ public class DespesaServico : IDespesaServico
                     despesa.DataCadastro = DateTime.Now;
                     despesa.DataPagamento = Convert.ToDateTime(values?[0]);
                     despesa.DataVencimento = Convert.ToDateTime(values?[0]);
-                    despesa.Nome = values?[1];
-                    string credito = values[3];
-                    string debito = values[4].Replace("-", "");
+                    despesa.Nome = values?[1] + values?[2];
+                    string credito = values[4];
+                    string debito = values[5].Replace("-", "");
                     if (!string.IsNullOrEmpty(credito))
                     {
                         despesa.TipoDespesa = EnumTipoDespesa.Investimentos;                        
                         despesa.Valor = Convert.ToDecimal(credito);
+                        despesa.Pago = true;
+                        despesa.DespesaAtrasada = false;
+                        despesa.IdCategoria = idCategoria;
+                        despesasInvestimentos.Add(despesa);
                     }
                     else
                     if (!string.IsNullOrEmpty(debito))
                     {
                         despesa.TipoDespesa = EnumTipoDespesa.Contas;
                         despesa.Valor = Convert.ToDecimal(debito);
-                    }
-                    despesa.Pago = true;
-                    despesa.DespesaAtrasada = false;
-                    despesa.IdCategoria = idCategoria;
-
-                    despesas.Add(despesa);
+                        despesa.Pago = true;
+                        despesa.DespesaAtrasada = false;
+                        despesa.IdCategoria = idCategoria;
+                        despesasContas.Add(despesa);
+                    }                   
                 }
             }
-            await _despesa.AdicionarListaDespesas(despesas);
+            await _despesa.AdicionarListaDespesas(despesasInvestimentos);
+            await _despesa.AdicionarListaDespesas(despesasContas);
             scope.Complete();
         }
+    }
 
+    public async Task ImportarDespeasExtratoItauCSV(IWorkbook workbook, int idCategoria)
+    {
+        List<string[]> data = new List<string[]>();
+        // obter a primeira planilha
+        ISheet sheet = workbook.GetSheetAt(0);
+
+        // percorrer as linhas e colunas da planilha
+        for (int i = sheet.FirstRowNum; i <= sheet.LastRowNum; i++)
+        {
+            IRow row = sheet.GetRow(i);
+            if (row == null) continue;
+
+            var rowData = new List<string>();
+            for (int j = row.FirstCellNum; j <= row.LastCellNum; j++)
+            {
+                ICell cell = row.GetCell(j);
+                if (cell == null) continue;
+
+                // adicionar o valor da célula à lista de dados da linha atual
+                rowData.Add(cell.ToString());
+            }
+            // adicionar a linha atual à lista de dados
+            data.Add(rowData.ToArray());
+        }
+
+        List<Despesa> despesas = new List<Despesa>();
+        await _despesa.AdicionarListaDespesas(despesas);
     }
 }

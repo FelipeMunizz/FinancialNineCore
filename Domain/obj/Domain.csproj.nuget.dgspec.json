@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj": {}
+    "D:\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj": {
+    "D:\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Domain\\obj\\",
+        "outputPath": "D:\\Projetos\\FinancialNineCore\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj"
+              "D:\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj"
               }
             }
           }
@@ -43,6 +47,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,17 +73,21 @@
         }
       }
     },
-    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj": {
+    "D:\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj",
+        "projectPath": "D:\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Entities\\obj\\",
+        "outputPath": "D:\\Projetos\\FinancialNineCore\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
