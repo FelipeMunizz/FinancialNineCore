@@ -24,6 +24,7 @@ C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\ref
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\Entities.pdb
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\Entities.genruntimeconfig.cache
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\ref\Entities.dll
+<<<<<<< HEAD
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Entities\bin\Debug\net7.0\Entities.deps.json
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Entities\bin\Debug\net7.0\Entities.runtimeconfig.json
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Entities\bin\Debug\net7.0\Entities.dll
@@ -38,3 +39,7 @@ C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Entities\obj\Debug\net7.
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Entities\obj\Debug\net7.0\Entities.pdb
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Entities\obj\Debug\net7.0\Entities.genruntimeconfig.cache
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Entities\obj\Debug\net7.0\ref\Entities.dll
+=======
+D:\Projetos\FinancialNineCore\Entities\bin\Debug\net7.0\Entities.runtimeconfig.json
+D:\Projetos\FinancialNineCore\Entities\obj\Debug\net7.0\Entities.genruntimeconfig.cache
+>>>>>>> d43302a587150f848a5e9c59b70f096f97cf7cdc

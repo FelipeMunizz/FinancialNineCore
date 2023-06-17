@@ -20,9 +20,10 @@ public class RepositorioDespesas : RepositorioGenerico<Despesa>, InterfaceDespes
         using (var banco = new AppDbContext(_context))
         {
             foreach(Despesa despesa in despesas)
+            {
                 banco.Despesa.Add(despesa);
-
-            await banco.SaveChangesAsync();
+                await banco.SaveChangesAsync();
+            }                
         }
     }
 
