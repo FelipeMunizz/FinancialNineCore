@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w6yM/Nn52fwv66XQDvgGkpigH1MvkJpRl+riQqri4dRdD+DMEVU7VhohTd+s1pkqG0YJtLQ6hnCJ1+Cq2WYNsA==",
+  "dgSpecHash": "iG0GSA06BhjtwwTieEe+dyahEX9zdZnufdXPE4Aex7Kkt3jn7b2oEnkvCgrGrZQfpxYRuBGsCxH9mwSNRbda2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\enums.net\\4.0.0\\enums.net.4.0.0.nupkg.sha512",
@@ -47,12 +47,6 @@
     "C:\\Users\\Felipe\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

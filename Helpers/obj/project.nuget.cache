@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AOCDzM9wQKouyyQ2W8YbB9DeTjHz36pTfVQgnl9UDSufp6M5VTzznUmu9R0AhK73Oi/Q/rvkTLG6hLuPT+a6Pw==",
+  "dgSpecHash": "L2vfjHLYr2u8wc+giFbUZV0IKEISWV5509/hv6FCYGMtXtseRvcQPVk2WWngEbRdDVYP74M2FVvwV9wQq3tmTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Helpers\\Helpers.csproj",
+  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\Helpers\\Helpers.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Helpers\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

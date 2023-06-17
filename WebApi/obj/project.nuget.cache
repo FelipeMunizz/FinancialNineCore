@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6czGIrOuQiRGg11DcasLzPm7cGF/nwng2BqMlBjz+tvEpY1l8N3uuln5wAqT4I7sNVGWS6dg9csoQjF8u/R9ew==",
+  "dgSpecHash": "PCQKAcoDhK/yQBweHn3mTtJBiCQvog5KlhizFW54grEUMPdT20uadTy3xa/1XfhQXS9yhbgAPxXXCO6n810Jqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\WebApi\\WebApi.csproj",
+  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -103,12 +103,6 @@
     "C:\\Users\\Felipe\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\WebApi\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

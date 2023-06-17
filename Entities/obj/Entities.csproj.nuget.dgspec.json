@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {}
+    "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
+    "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
+        "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\obj\\",
+        "outputPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

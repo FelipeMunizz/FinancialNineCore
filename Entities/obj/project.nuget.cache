@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1xriFn3mxqci3Fs8QdPDjrleN6mO9rryrJ/89TyzAnSmaQuGOpeI1HMy4pmpcFH57BM6DimypUwKj0kUkk2+ag==",
+  "dgSpecHash": "G3+hcR2ZMnQfbW3d/jRCc2A4V42KzTvqrOxyagENHhcrMItQDrQcA02LfIh4jbjEz4lIEk/aSydwp/oalLBWUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
+  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -34,12 +34,6 @@
     "C:\\Users\\Felipe\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

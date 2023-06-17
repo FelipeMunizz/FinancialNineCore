@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+LAAOn4A4vZJkVI8II7ffcFair5M3esN1by7rtjmUDVzob3lpKs9sfNZKuf5gv6W4c2cYddSRtmQz/2uhxqCBA==",
+  "dgSpecHash": "iQoBYSkWJ4QUCm+LYANwzFFU+KwoYlqm9plXe1/pQTheN6u+twEghevWRcgbiWQa0DguS4aSDqBSvIP515SaMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
+  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -86,12 +86,6 @@
     "C:\\Users\\Felipe\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",
