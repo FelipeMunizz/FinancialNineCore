@@ -22,3 +22,15 @@ C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Helpers\obj\Debug\net7.0\Help
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Helpers\obj\Debug\net7.0\refint\Helpers.dll
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Helpers\obj\Debug\net7.0\Helpers.pdb
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\Helpers\obj\Debug\net7.0\ref\Helpers.dll
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\bin\Debug\net7.0\Helpers.deps.json
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\bin\Debug\net7.0\Helpers.dll
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\bin\Debug\net7.0\Helpers.pdb
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\Helpers.csproj.AssemblyReference.cache
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\Helpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\Helpers.AssemblyInfoInputs.cache
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\Helpers.AssemblyInfo.cs
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\Helpers.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\Helpers.dll
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\refint\Helpers.dll
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\Helpers.pdb
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\Helpers\obj\Debug\net7.0\ref\Helpers.dll

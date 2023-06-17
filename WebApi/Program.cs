@@ -17,6 +17,7 @@ using WebApi.Token;
 
 var builder = WebApplication.CreateBuilder(args);
 AppDbContext dbContext = new AppDbContext();
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -103,6 +104,17 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                         }
                     };
                 });
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -117,6 +129,8 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.MapControllers();
 

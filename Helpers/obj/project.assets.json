@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Helpers\\Helpers.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Helpers\\Helpers.csproj",
       "projectName": "Helpers",
-      "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Helpers\\Helpers.csproj",
+      "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Helpers\\Helpers.csproj",
       "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Helpers\\obj\\",
+      "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Helpers\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

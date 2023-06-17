@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wg/HqojuIJKZl0SFII6ZddWDcV+hW7F20szKWnKlTX7VkM4QC7geBn+hJ4CogWA+HhFTcP5RZazS1fkXRZF+RA==",
+  "dgSpecHash": "AOCDzM9wQKouyyQ2W8YbB9DeTjHz36pTfVQgnl9UDSufp6M5VTzznUmu9R0AhK73Oi/Q/rvkTLG6hLuPT+a6Pw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Helpers\\Helpers.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Helpers\\Helpers.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

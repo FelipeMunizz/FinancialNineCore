@@ -897,11 +897,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -918,8 +918,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\Entities\\Entities.csproj"
+            "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
             }
           }
         }
@@ -949,7 +949,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   },
