@@ -56,3 +56,14 @@
 /WebApi/obj/Debug/net7.0/refint/WebApi.dll
 /WebApi/obj/Debug/net7.0/ref/WebApi.dll
 /.vs/FinancialNineCore/FileContentIndex
+*.bin
+/Domain/obj/Debug/net7.0/Domain.assets.cache
+/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Entities/obj/Debug/net7.0/Entities.assets.cache
+/Entities/obj/Debug/net7.0/Entities.GeneratedMSBuildEditorConfig.editorconfig
+/Helpers/obj/Debug/net7.0/Helpers.assets.cache
+/Helpers/obj/Debug/net7.0/Helpers.GeneratedMSBuildEditorConfig.editorconfig
+/Infra/obj/Debug/net7.0/Infra.assets.cache
+/Infra/obj/Debug/net7.0/Infra.GeneratedMSBuildEditorConfig.editorconfig
+/WebApi/obj/Debug/net7.0/WebApi.assets.cache
+/WebApi/obj/Debug/net7.0/WebApi.GeneratedMSBuildEditorConfig.editorconfig
