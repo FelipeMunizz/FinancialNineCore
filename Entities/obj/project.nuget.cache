@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1xriFn3mxqci3Fs8QdPDjrleN6mO9rryrJ/89TyzAnSmaQuGOpeI1HMy4pmpcFH57BM6DimypUwKj0kUkk2+ag==",
+  "dgSpecHash": "BnWaVxLlnaIi+qM25dxBB8/+nL817s1OCctFLNRdSKeYtbH7UPwOe9hvKNNU/8BL2nIpeF1MZZ1ZJUsZZKhFPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
@@ -34,12 +34,6 @@
     "C:\\Users\\Felipe\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",
