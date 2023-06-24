@@ -1,12 +1,9 @@
 ﻿using Domain.Interfaces.IDespesa;
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
-using System.Collections.Generic;
-using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 
 namespace WebApi.Controllers;
 
@@ -71,6 +68,30 @@ public class DespesasController : ControllerBase
         await _service.ImportarDespeasExtratoItauCSV(workbook, idCategoria);
         
         return Ok();
+    }
+
+    [HttpPost("ImportarNotaFiscal/{idCategoria:int}")]
+    [Produces("application/json")]
+    public async Task<IActionResult> ImportarNotaFiscal(List<IFormFile> arquivos, int idCategoria)
+    {
+        try
+        {
+            foreach (var arquivo in arquivos)
+            {
+                using (StreamReader reader = new StreamReader(arquivo.OpenReadStream()))
+                {
+                    string xmlContent = await reader.ReadToEndAsync();
+
+                    await _service.ImportarNotaFiscal(xmlContent, idCategoria);
+                }
+            }
+
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Erro ao importar a nota fiscal: {ex.Message}");
+        }
     }
 
     [HttpPut("AtualizarDespesa")]

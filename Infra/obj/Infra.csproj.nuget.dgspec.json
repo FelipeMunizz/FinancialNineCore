@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj": {}
+    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj": {
+    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\FinancialNineCore\\back\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
+              "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
               }
             }
           }
@@ -73,21 +69,17 @@
         }
       }
     },
-    "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
+    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -148,21 +140,17 @@
         }
       }
     },
-    "D:\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj": {
+    "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
+        "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\FinancialNineCore\\back\\Infra\\obj\\",
+        "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -176,11 +164,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj"
+              "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj"
               },
-              "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
+              "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
               }
             }
           }

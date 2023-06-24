@@ -4,6 +4,7 @@ using Entities.Entidades;
 using Entities.Enums;
 using NPOI.SS.UserModel;
 using System.Transactions;
+using System.Xml;
 
 namespace Domain.Servicos;
 
@@ -146,5 +147,29 @@ public class DespesaServico : IDespesaServico
 
         List<Despesa> despesas = new List<Despesa>();
         await _despesa.AdicionarListaDespesas(despesas);
+    }
+
+    public async Task ImportarNotaFiscal(string xmlContent, int categoria)
+    {
+        XmlDocument xml = new XmlDocument();
+        xml.LoadXml(xmlContent);
+
+        Despesa despesa = new Despesa
+        {
+            IdCategoria = categoria,
+            Nome = xml.GetElementsByTagName("xProd")?.Item(0)?.InnerText,
+            TipoDespesa = EnumTipoDespesa.Contas,
+            DataCadastro = DateTime.Now,
+            DataPagamento = Convert.ToDateTime(xml.GetElementsByTagName("dhEmi")?.Item(0)?.InnerText),
+            DataVencimento = Convert.ToDateTime(xml.GetElementsByTagName("dhEmi")?.Item(0)?.InnerText),
+            Ano = Convert.ToDateTime(xml.GetElementsByTagName("dhEmi")?.Item(0)?.InnerText).Year,
+            Mes = Convert.ToDateTime(xml.GetElementsByTagName("dhEmi")?.Item(0)?.InnerText).Month,
+            Pago = true,
+            DespesaAtrasada = false,
+            Valor = Convert.ToDecimal(xml.GetElementsByTagName("vNF")?.Item(0)?.InnerText.Replace(".", ","))
+        };
+
+
+        await _despesa.Add(despesa);
     }
 }
