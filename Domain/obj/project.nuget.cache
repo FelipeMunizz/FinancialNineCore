@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iG0GSA06BhjtwwTieEe+dyahEX9zdZnufdXPE4Aex7Kkt3jn7b2oEnkvCgrGrZQfpxYRuBGsCxH9mwSNRbda2w==",
+  "dgSpecHash": "swBx0ciz1/Cw7/wEpfCngAAbQYW6zrm23HelQmmsFcEzHF2B0spx0BAU9rPJqbYg4zdAnmtRxOsHt2UNhBW5ew==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\enums.net\\4.0.0\\enums.net.4.0.0.nupkg.sha512",

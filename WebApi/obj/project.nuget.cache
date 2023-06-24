@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PCQKAcoDhK/yQBweHn3mTtJBiCQvog5KlhizFW54grEUMPdT20uadTy3xa/1XfhQXS9yhbgAPxXXCO6n810Jqw==",
+  "dgSpecHash": "tQcU8zXA3AJwHPgwrtK/Axp1EUJXxKD6tG0rDBQ75qGMq893uvcnSnrMKuuwdXPhc9UzF+sUNLGKpS4PXIEuzA==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
