@@ -5,7 +5,7 @@ using Entities.Enums;
 using NPOI.SS.UserModel;
 using System.Transactions;
 
-namespace Domain.Interfaces.Servicos;
+namespace Domain.Servicos;
 
 public class DespesaServico : IDespesaServico
 {
@@ -61,10 +61,10 @@ public class DespesaServico : IDespesaServico
         return new
         {
             sucesso = "Ok",
-            despesasPagas = despesasPagas,
-            despesasPendentes = despesasPendentes,
-            despesasNaoPagasMesAnterior = despesasNaoPagasMesAnterior,
-            investimentos = investimentos
+            despesasPagas,
+            despesasPendentes,
+            despesasNaoPagasMesAnterior,
+            investimentos
         };
     }
 
@@ -94,7 +94,7 @@ public class DespesaServico : IDespesaServico
                     string debito = values[5].Replace("-", "");
                     if (!string.IsNullOrEmpty(credito))
                     {
-                        despesa.TipoDespesa = EnumTipoDespesa.Investimentos;                        
+                        despesa.TipoDespesa = EnumTipoDespesa.Investimentos;
                         despesa.Valor = Convert.ToDecimal(credito);
                         despesa.Pago = true;
                         despesa.DespesaAtrasada = false;
@@ -110,7 +110,7 @@ public class DespesaServico : IDespesaServico
                         despesa.DespesaAtrasada = false;
                         despesa.IdCategoria = idCategoria;
                         despesasContas.Add(despesa);
-                    }                   
+                    }
                 }
             }
             await _despesa.AdicionarListaDespesas(despesasInvestimentos);

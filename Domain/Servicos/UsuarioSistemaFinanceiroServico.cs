@@ -2,7 +2,7 @@
 using Domain.Interfaces.IUsuarioSistemaFinanceiro;
 using Entities.Entidades;
 
-namespace Domain.Interfaces.Servicos;
+namespace Domain.Servicos;
 
 public class UsuarioSistemaFinanceiroServico : IUsuarioSistemaFinanceiroServico
 {

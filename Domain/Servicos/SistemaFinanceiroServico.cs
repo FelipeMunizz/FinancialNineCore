@@ -2,7 +2,7 @@
 using Domain.Interfaces.ISistemaFinanceiro;
 using Entities.Entidades;
 
-namespace Domain.Interfaces.Servicos;
+namespace Domain.Servicos;
 
 public class SistemaFinanceiroServico : ISistemaFinanceiroServico
 {
@@ -29,7 +29,7 @@ public class SistemaFinanceiroServico : ISistemaFinanceiroServico
             sistemaFinanceiro.GerarCopiaDespesa = true;
 
             await _sFinanceiro.Add(sistemaFinanceiro);
-        }           
+        }
     }
 
     public async Task AtualizarSistemaFinanceiro(SistemaFinanceiro sistemaFinanceiro)
@@ -40,6 +40,6 @@ public class SistemaFinanceiroServico : ISistemaFinanceiroServico
         {
             sistemaFinanceiro.DiaFechamento = 1;
             await _sFinanceiro.Update(sistemaFinanceiro);
-        }            
+        }
     }
 }

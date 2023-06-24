@@ -4,7 +4,7 @@ using Domain.Interfaces.IDespesa;
 using Domain.Interfaces.InterfaceServicos;
 using Domain.Interfaces.ISistemaFinanceiro;
 using Domain.Interfaces.IUsuarioSistemaFinanceiro;
-using Domain.Interfaces.Servicos;
+using Domain.Servicos;
 using Entities.Entidades;
 using Infra.Configuracao;
 using Infra.Repositorio;

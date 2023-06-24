@@ -2,7 +2,7 @@
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
 
-namespace Domain.Interfaces.Servicos;
+namespace Domain.Servicos;
 
 public class CategoriaServico : ICategoriaServico
 {
@@ -23,7 +23,7 @@ public class CategoriaServico : ICategoriaServico
     public async Task AutalizarCategoria(Categoria categoria)
     {
         var valido = categoria.ValidaString(categoria.Nome, "Nome");
-        if(valido)
+        if (valido)
             await _categoria.Update(categoria);
     }
 }
