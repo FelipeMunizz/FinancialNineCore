@@ -49,8 +49,6 @@ C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\NPOI.OOXML.dll
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\NPOI.OpenXml4Net.dll
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\NPOI.OpenXmlFormats.dll
-C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\NPOI.dll
-C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\BouncyCastle.Crypto.dll
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\ICSharpCode.SharpZipLib.dll
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\SixLabors.Fonts.dll
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\SixLabors.ImageSharp.dll
@@ -105,3 +103,5 @@ C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\obj\Debug\net7.0\
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\Felipe\Desktop\Projetos\FinancialNineCore\back\WebApi\bin\Debug\net7.0\NPOI.Core.dll
