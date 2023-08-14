@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MEeLJUk6BC5fmT6DkwLGT43xcQncYLkgF4PAhv9OPbi8LF6H08wfkCC0VNLlrRb3zHBMt0h4WyILvxCGYuhJWA==",
+  "dgSpecHash": "vT6ZU6udd1meuWpj7WHQXnMOF+bJvlGaqtpOBKxASZ4JgNLVQPFAMSnAK0il3QFG7+5PCJRu/aLu+8ruigYxZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",

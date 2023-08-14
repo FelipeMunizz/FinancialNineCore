@@ -3970,11 +3970,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Infra\\Infra.csproj",
       "projectName": "Infra",
-      "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
+      "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Infra\\Infra.csproj",
       "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\obj\\",
+      "outputPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3991,11 +3991,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj"
+            "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
+            "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Entities\\Entities.csproj"
             }
           }
         }
@@ -4039,7 +4039,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   },

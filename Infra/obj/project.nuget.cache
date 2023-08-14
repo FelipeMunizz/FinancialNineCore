@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4UNTQ6XuviwHsEeVpSCUxx9H3nR3W0tuXG7Se3pmYfQwCJJGc97oXjvfdoyaeqesUic+yRtOtRnbGxdQft69xw==",
+  "dgSpecHash": "mZbG7ghIIz+yeJKI2qp739HZWHvDQUR8g6DeJctdBHm2qMtYu2Bq4Y+F4IheCsHcohGPNxyCInEEOwofSUTweg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Infra\\Infra.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\FinancialNineCore\\Infra\\Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
