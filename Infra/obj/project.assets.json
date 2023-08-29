@@ -3982,8 +3982,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Felipe\\.nuget\\packages\\": {},
-    "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Felipe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -3994,12 +3993,8 @@
       "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
       "outputPath": "D:\\Projetos\\FinancialNineCore\\back\\Infra\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4061,7 +4056,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },

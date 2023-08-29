@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BnWaVxLlnaIi+qM25dxBB8/+nL817s1OCctFLNRdSKeYtbH7UPwOe9hvKNNU/8BL2nIpeF1MZZ1ZJUsZZKhFPA==",
+  "dgSpecHash": "GJmDJf/YmXsYqXpv+ShPCLM9hpT1/zw3X2QitH34ybFmrmhIY+l0fLSK609430VTkt/r1+LvYfzWmnlmBq0xXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Desktop\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
+  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

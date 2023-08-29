@@ -27,7 +27,7 @@ public class UsuarioSistemaFinanceiroController : ControllerBase
         return await _repositorio.ListaUsuariosSistemasFinanceiro(idSistema);
     }
 
-    [HttpPost("CadastrarSistemaFinanceiro/{idSistema:int}")]
+    [HttpPost("CadastrarUsuarioSistemaFinanceiro/{idSistema:int}")]
     [Produces("application/json")]
     public async Task<IActionResult> CadastrarUsuarioSistemaFinanceiro(int idSistema, [FromBody] string email)
     {
