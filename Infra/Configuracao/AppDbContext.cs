@@ -6,8 +6,8 @@ namespace Infra.Configuracao;
 
 public class AppDbContext : IdentityDbContext<ApplicationUser>
 {
-    public AppDbContext(DbContextOptions options ) : base( options ){}
-    public AppDbContext(){}
+    public AppDbContext(DbContextOptions options) : base(options) { }
+    public AppDbContext() { }
 
     #region Entidades
     public DbSet<SistemaFinanceiro> SistemaFinanceiro { get; set; }
@@ -38,8 +38,8 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     public string GetConnectionString()
     {
         string pcFelipe = "Data Source=DESKTOP-10DDISU;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
-        string not = "Data Source=DESKTOP-V672319\\SQLEXPRESS;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
-        return pcFelipe;
+        string not = "Data Source=DESKTOP-HH8094V;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
+        return not;
     }
     #endregion    
 }

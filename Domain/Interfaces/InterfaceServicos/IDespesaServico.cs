@@ -10,4 +10,5 @@ public interface IDespesaServico
     Task<object> CarregaGraficos(string email);
     Task ImportarDespeasExtratoBradescoCSV(StreamReader streamReader, int idCategoria);
     Task ImportarDespeasExtratoItauCSV(IWorkbook workbook, int idCategoria);
+    Task ImportarNotaFiscal(string xml, int categoria);
 }
