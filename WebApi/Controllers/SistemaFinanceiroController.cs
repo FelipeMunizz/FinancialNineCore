@@ -29,11 +29,11 @@ public class SistemaFinanceiroController : ControllerBase
 
     [HttpPost("AdicionarSistemaFinanceiro")]
     [Produces("application/json")]
-    public async Task<IActionResult> AdicionarSistemaFinanceiro(SistemaFinanceiro sistema)
+    public async Task<SistemaFinanceiro> AdicionarSistemaFinanceiro(SistemaFinanceiro sistema)
     {
         await _servico.AdicionarSistemaFinanceiro(sistema);
 
-        return Ok(sistema);
+        return sistema;
     }
 
     [HttpPut("AtualizarSistemaFinanceiro")]

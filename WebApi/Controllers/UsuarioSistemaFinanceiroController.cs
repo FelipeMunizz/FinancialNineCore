@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebApi.Controllers;
 
 [Authorize(AuthenticationSchemes = "Bearer")]
-[Route("api/[controller]")]
+[Route("api/")]
 [ApiController]
 public class UsuarioSistemaFinanceiroController : ControllerBase
 {
@@ -29,7 +29,7 @@ public class UsuarioSistemaFinanceiroController : ControllerBase
 
     [HttpPost("CadastrarUsuarioSistemaFinanceiro/{idSistema:int}")]
     [Produces("application/json")]
-    public async Task<IActionResult> CadastrarUsuarioSistemaFinanceiro(int idSistema, [FromBody] string email)
+    public async Task<object> CadastrarUsuarioSistemaFinanceiro(int idSistema, string email)
     {
         try
         {
@@ -42,12 +42,12 @@ public class UsuarioSistemaFinanceiroController : ControllerBase
                     SistemaAtual = true
                 });
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            return BadRequest(ex.Message);
+            return Task.FromResult(false);
         }
 
-        return Ok("Usuario Cadastrado com Sucesso");
+        return Task.FromResult(true);
     }
 
     [HttpDelete("DeletarUsuarioSistemaFinanceiro/{idUsuario:int}")]

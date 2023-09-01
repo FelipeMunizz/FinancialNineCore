@@ -39,7 +39,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         string pcFelipe = "Data Source=DESKTOP-10DDISU;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
         string not = "Data Source=DESKTOP-HH8094V;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
-        return not;
+        return pcFelipe;
     }
     #endregion    
 }
