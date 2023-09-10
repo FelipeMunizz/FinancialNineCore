@@ -103,3 +103,5 @@
 /WebApi/bin/Debug/net7.0/WebApi.exe
 /.vs/ProjectEvaluation/financialninecore.metadata.v7.bin
 /.vs/ProjectEvaluation/financialninecore.projects.v7.bin
+/Entities/obj/Debug/net7.0/ref/Entities.dll
+/Entities/obj/Debug/net7.0/refint/Entities.dll
