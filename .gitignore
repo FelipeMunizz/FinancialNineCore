@@ -105,3 +105,16 @@
 /.vs/ProjectEvaluation/financialninecore.projects.v7.bin
 /Entities/obj/Debug/net7.0/ref/Entities.dll
 /Entities/obj/Debug/net7.0/refint/Entities.dll
+/Domain/obj/Debug/net7.0/Domain.assets.cache
+/Domain/obj/Domain.csproj.nuget.g.props
+/Entities/obj/Debug/net7.0/Entities.assets.cache
+/Entities/obj/Debug/net7.0/Entities.csproj.AssemblyReference.cache
+/Entities/obj/Entities.csproj.nuget.g.props
+/Helpers/obj/Debug/net7.0/Helpers.assets.cache
+/Helpers/obj/Debug/net7.0/Helpers.csproj.AssemblyReference.cache
+/Helpers/obj/Helpers.csproj.nuget.g.props
+/Infra/obj/Debug/net7.0/Infra.assets.cache
+/Infra/obj/Infra.csproj.nuget.g.props
+/WebApi/obj/Debug/net7.0/staticwebassets.build.json
+/WebApi/obj/Debug/net7.0/WebApi.assets.cache
+/WebApi/obj/WebApi.csproj.nuget.g.props
