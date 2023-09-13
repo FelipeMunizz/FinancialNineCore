@@ -15,7 +15,7 @@ public class RepositorioCategoria : RepositorioGenerico<Categoria>, InterfaceCat
         _context = new DbContextOptions<AppDbContext>();
     }
 
-    public async Task<IList<Categoria>> ListarCategoriasUsuario(string emailUsuario)
+    public async Task<IList<Categoria>> ListarCategoriasUsuario(string emailUsuario, int idSistema)
     {
         using (var banco = new AppDbContext(_context))
         {
@@ -24,7 +24,7 @@ public class RepositorioCategoria : RepositorioGenerico<Categoria>, InterfaceCat
                     from s in banco.SistemaFinanceiro
                     join c in banco.Categoria on s.Id equals c.IdSistema
                     join us in banco.UsuarioSistemaFinanceiro on s.Id equals us.IdSistema
-                    where us.EmailUsuario.Equals(emailUsuario) && us.SistemaAtual
+                    where us.EmailUsuario.Equals(emailUsuario) && us.IdSistema.Equals(idSistema)
                     select c
                 ).AsNoTracking().ToListAsync();
         }

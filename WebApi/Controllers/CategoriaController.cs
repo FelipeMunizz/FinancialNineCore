@@ -30,9 +30,9 @@ public class CategoriaController : ControllerBase
 
     [HttpGet("ListarCategoriasUsuario")]
     [Produces("application/json")]
-    public async Task<object> ListarCategoriasUsuario(string email)
+    public async Task<object> ListarCategoriasUsuario(string email, int idSistema)
     {
-        return await _repository.ListarCategoriasUsuario(email);
+        return await _repository.ListarCategoriasUsuario(email, idSistema);
     }
 
     [HttpPost("AdicionarCategoria")]
