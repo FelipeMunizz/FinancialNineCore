@@ -13,7 +13,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<SistemaFinanceiro> SistemaFinanceiro { get; set; }
     public DbSet<UsuarioSistemaFinanceiro> UsuarioSistemaFinanceiro { get; set; }
     public DbSet<Categoria> Categoria { get; set; }
-    public DbSet<Despesa> Despesa { get; set; }
+    public DbSet<Lancamento> Lancamentos { get; set; }
     #endregion
 
     #region Metodos Override
@@ -39,7 +39,8 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         string pcFelipe = "Data Source=DESKTOP-HER7P6R;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
         string not = "Data Source=DESKTOP-HH8094V;Initial Catalog=FinancialNineCore;Integrated Security=True;Pooling=False;Encrypt=False;TrustServerCertificate=False;";
-        return pcFelipe;
+        string producao = "workstation id=financialninecore.mssql.somee.com;packet size=4096;user id=FinancialCore_SQLLogin_1;pwd=5alc1cha;data source=financialninecore.mssql.somee.com;persist security info=False;initial catalog=financialninecore; Pooling=False;Encrypt=true;TrustServerCertificate=true;";
+        return producao;
     }
     #endregion    
 }

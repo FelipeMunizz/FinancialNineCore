@@ -1,4 +1,4 @@
-﻿using Domain.Interfaces.IDespesa;
+﻿using Domain.Interfaces.ILancamento;
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
 using Entities.Enums;
@@ -8,55 +8,55 @@ using System.Xml;
 
 namespace Domain.Servicos;
 
-public class DespesaServico : IDespesaServico
+public class LancamentoServico : ILancamentoServico
 {
-    private readonly InterfaceDespesa _despesa;
+    private readonly InterfaceLancamento _lancamentos;
 
-    public DespesaServico(InterfaceDespesa despesa)
+    public LancamentoServico(InterfaceLancamento lancamentos)
     {
-        _despesa = despesa;
+        _lancamentos = lancamentos;
     }
 
-    public async Task AdicionarDespesa(Despesa despesa)
+    public async Task AdicionarLancamento(Lancamento lancamento)
     {
         DateTime data = DateTime.UtcNow;
-        despesa.DataCadastro = data;
-        despesa.Ano = data.Year;
-        despesa.Mes = data.Month;
+        lancamento.DataCadastro = data;
+        lancamento.Ano = data.Year;
+        lancamento.Mes = data.Month;
 
-        var valido = despesa.ValidaString(despesa.Nome, "Nome");
+        var valido = lancamento.ValidaString(lancamento.Nome, "Nome");
         if (valido)
-            await _despesa.Add(despesa);
+            await _lancamentos.Add(lancamento);
     }
 
-    public async Task AtualizarDespesa(Despesa despesa)
+    public async Task AtualizarLancamento(Lancamento lancamento)
     {
         DateTime data = DateTime.UtcNow;
-        despesa.DataAlteração = data;
+        lancamento.DataAlteração = data;
 
-        if (despesa.Pago)
-            despesa.DataPagamento = data;
+        if (lancamento.Pago)
+            lancamento.DataPagamento = data;
 
-        var valido = despesa.ValidaString(despesa.Nome, "Nome");
+        var valido = lancamento.ValidaString(lancamento.Nome, "Nome");
         if (valido)
-            await _despesa.Update(despesa);
+            await _lancamentos.Update(lancamento);
     }
 
     public async Task<object> CarregaGraficos(string email)
     {
-        var despesasUsuario = await _despesa.ListaDespesasUsuario(email);
-        var despesaAnterior = await _despesa.ListaDespesasUsuarioNaoPagasMesesAnteriores(email);
+        var lancamentosUsuario = await _lancamentos.ListaLancamentosUsuario(email);
+        var lancamentoAnterior = await _lancamentos.ListaLancamentosUsuarioNaoPagasMesesAnteriores(email);
 
-        var despesasNaoPagasMesAnterior = despesaAnterior.Any() ?
-            despesaAnterior.ToList().Sum(x => x.Valor) : 0;
+        var despesasNaoPagasMesAnterior = lancamentoAnterior.Any() ?
+            lancamentoAnterior.ToList().Sum(x => x.Valor) : 0;
 
-        var despesasPagas = despesasUsuario.Where(d => d.Pago && d.TipoDespesa == EnumTipoDespesa.Contas)
+        var despesasPagas = lancamentosUsuario.Where(d => d.Pago && d.TipoLancamento == EnumTipoLancamento.Despesa)
             .Sum(x => x.Valor);
 
-        var despesasPendentes = despesasUsuario.Where(d => !d.Pago && d.TipoDespesa == EnumTipoDespesa.Contas)
+        var despesasPendentes = lancamentosUsuario.Where(d => !d.Pago && d.TipoLancamento == EnumTipoLancamento.Despesa)
             .Sum(x => x.Valor);
 
-        var investimentos = despesasUsuario.Where(d => d.TipoDespesa == EnumTipoDespesa.Investimentos)
+        var receitas = lancamentosUsuario.Where(d => d.TipoLancamento == EnumTipoLancamento.Receita)
             .Sum(x => x.Valor);
 
         return new
@@ -65,15 +65,15 @@ public class DespesaServico : IDespesaServico
             despesasPagas,
             despesasPendentes,
             despesasNaoPagasMesAnterior,
-            investimentos
+            receitas
         };
     }
 
-    public async Task ImportarDespeasExtratoBradescoCSV(StreamReader streamReader, int idCategoria)
+    public async Task ImportarLancamentosExtratoBradescoCSV(StreamReader streamReader, int idCategoria)
     {
         int n;
-        List<Despesa> despesasContas = new List<Despesa>();
-        List<Despesa> despesasInvestimentos = new List<Despesa>();
+        List<Lancamento> lancamentosDespesas= new List<Lancamento>();
+        List<Lancamento> lancamentosReceitas = new List<Lancamento>();
         using (TransactionScope scope = new TransactionScope())
         {
             while (!streamReader.EndOfStream)
@@ -84,7 +84,7 @@ public class DespesaServico : IDespesaServico
                 string doc = values[3];
                 if (!string.IsNullOrEmpty(doc) && int.TryParse(doc, out n))
                 {
-                    Despesa despesa = new Despesa();
+                    Lancamento despesa = new Lancamento();
                     despesa.Ano = Convert.ToDateTime(values?[0]).Year;
                     despesa.Mes = Convert.ToDateTime(values?[0]).Month;
                     despesa.DataCadastro = DateTime.Now;
@@ -95,32 +95,32 @@ public class DespesaServico : IDespesaServico
                     string debito = values[5].Replace("-", "");
                     if (!string.IsNullOrEmpty(credito))
                     {
-                        despesa.TipoDespesa = EnumTipoDespesa.Investimentos;
+                        despesa.TipoLancamento = EnumTipoLancamento.Receita;
                         despesa.Valor = Convert.ToDecimal(credito);
                         despesa.Pago = true;
                         despesa.DespesaAtrasada = false;
                         despesa.IdCategoria = idCategoria;
-                        despesasInvestimentos.Add(despesa);
+                        lancamentosReceitas.Add(despesa);
                     }
                     else
                     if (!string.IsNullOrEmpty(debito))
                     {
-                        despesa.TipoDespesa = EnumTipoDespesa.Contas;
+                        despesa.TipoLancamento = EnumTipoLancamento.Despesa;
                         despesa.Valor = Convert.ToDecimal(debito);
                         despesa.Pago = true;
                         despesa.DespesaAtrasada = false;
                         despesa.IdCategoria = idCategoria;
-                        despesasContas.Add(despesa);
+                        lancamentosDespesas.Add(despesa);
                     }
                 }
             }
-            await _despesa.AdicionarListaDespesas(despesasInvestimentos);
-            await _despesa.AdicionarListaDespesas(despesasContas);
+            await _lancamentos.AdicionarListaLancamentos(lancamentosReceitas);
+            await _lancamentos.AdicionarListaLancamentos(lancamentosDespesas);
             scope.Complete();
         }
     }
 
-    public async Task ImportarDespeasExtratoItauCSV(IWorkbook workbook, int idCategoria)
+    public async Task ImportarLancamentosExtratoItauCSV(IWorkbook workbook, int idCategoria)
     {
         List<string[]> data = new List<string[]>();
         // obter a primeira planilha
@@ -145,8 +145,8 @@ public class DespesaServico : IDespesaServico
             data.Add(rowData.ToArray());
         }
 
-        List<Despesa> despesas = new List<Despesa>();
-        await _despesa.AdicionarListaDespesas(despesas);
+        List<Lancamento> lancamentos = new List<Lancamento>();
+        await _lancamentos.AdicionarListaLancamentos(lancamentos);
     }
 
     public async Task ImportarNotaFiscal(string xmlContent, int categoria)
@@ -154,11 +154,11 @@ public class DespesaServico : IDespesaServico
         XmlDocument xml = new XmlDocument();
         xml.LoadXml(xmlContent);
 
-        Despesa despesa = new Despesa
+        Lancamento lancamento = new Lancamento
         {
             IdCategoria = categoria,
             Nome = xml.GetElementsByTagName("xProd")?.Item(0)?.InnerText,
-            TipoDespesa = EnumTipoDespesa.Contas,
+            TipoLancamento = EnumTipoLancamento.Despesa,
             DataCadastro = DateTime.Now,
             DataPagamento = Convert.ToDateTime(xml.GetElementsByTagName("dhEmi")?.Item(0)?.InnerText),
             DataVencimento = Convert.ToDateTime(xml.GetElementsByTagName("dhEmi")?.Item(0)?.InnerText),
@@ -170,6 +170,6 @@ public class DespesaServico : IDespesaServico
         };
 
 
-        await _despesa.Add(despesa);
+        await _lancamentos.Add(lancamento);
     }
 }

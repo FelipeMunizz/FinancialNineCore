@@ -1,0 +1,17 @@
+D:\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Integrations.deps.json
+D:\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Integrations.dll
+D:\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Integrations.pdb
+D:\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Domain.dll
+D:\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Entities.dll
+D:\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Domain.pdb
+D:\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Entities.pdb
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.csproj.AssemblyReference.cache
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.AssemblyInfoInputs.cache
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.AssemblyInfo.cs
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.csproj.CoreCompileInputs.cache
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.csproj.CopyComplete
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.dll
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\refint\Integrations.dll
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.pdb
+D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\ref\Integrations.dll

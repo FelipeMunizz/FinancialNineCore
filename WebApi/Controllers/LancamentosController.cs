@@ -1,4 +1,4 @@
-﻿using Domain.Interfaces.IDespesa;
+﻿using Domain.Interfaces.ILancamento;
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
 using Microsoft.AspNetCore.Authorization;
@@ -11,53 +11,53 @@ namespace WebApi.Controllers;
 [Authorize(AuthenticationSchemes = "Bearer")]
 [Route("api/[controller]")]
 [ApiController]
-public class DespesasController : ControllerBase
+public class LancamentosController : ControllerBase
 {
-    private readonly InterfaceDespesa _repository;
-    private readonly IDespesaServico _service;
+    private readonly InterfaceLancamento _repository;
+    private readonly ILancamentoServico _service;
 
-    public DespesasController(InterfaceDespesa repository, IDespesaServico service)
+    public LancamentosController(InterfaceLancamento repository, ILancamentoServico service)
     {
         _repository = repository;
         _service = service;
     }
 
-    [HttpGet("ListarDespesasUsuario")]
+    [HttpGet("ListarLancamentosUsuario")]
     [Produces("application/json")]
-    public async Task<object> ListarDespesasUsuario(string email) => await _repository.ListaDespesasUsuario(email);
+    public async Task<object> ListarLancamentosUsuario(string email) => await _repository.ListaLancamentosUsuario(email);
 
-    [HttpGet("ObterDespesa/{id:int}")]
+    [HttpGet("ObterLancamento/{id:int}")]
     [Produces("application/json")]
-    public async Task<ActionResult<Despesa>> ObterDespesa(int id)
+    public async Task<ActionResult<Lancamento>> ObterLancamento(int id)
     {
-        Despesa despesa = await _repository.GetEntityById(id);
-        return Ok(despesa);
+        Lancamento lancamento = await _repository.GetEntityById(id);
+        return Ok(lancamento);
     }
 
     [HttpGet("CarregarGraficos")]
     [Produces("application/json")]
     public async Task<object> CarregarGraficos(string email) => await _service.CarregaGraficos(email);
 
-    [HttpPost("AdicionarDespesa")]
+    [HttpPost("AdicionarLancamento")]
     [Produces("application/json")]
-    public async Task<ActionResult<Despesa>> AdicionarDespesa(Despesa despesa)
+    public async Task<ActionResult<Lancamento>> AdicionarLancamento(Lancamento lancamento)
     {
-        await _service.AdicionarDespesa(despesa);
-        return Ok(despesa);
+        await _service.AdicionarLancamento(lancamento);
+        return Ok(lancamento);
     }
 
-    [HttpPost("ImportarDespeasExtratoBradescoCSV/{idCategoria:int}")]
+    [HttpPost("ImportarLancamentosExtratoBradescoCSV/{idCategoria:int}")]
     [Produces("application/json")]
-    public async Task<IActionResult> ImportarDespeasExtratoBradescoCSV(IFormFile arquivo, int idCategoria)
+    public async Task<IActionResult> ImportarLancamentosExtratoBradescoCSV(IFormFile arquivo, int idCategoria)
     {
         using var streamReader = new StreamReader(arquivo.OpenReadStream());
-        await _service.ImportarDespeasExtratoBradescoCSV(streamReader, idCategoria);
+        await _service.ImportarLancamentosExtratoBradescoCSV(streamReader, idCategoria);
         return Ok();
     }
 
-    [HttpPost("ImportarDespeasExtratoItauCSV/{idCategoria:int}")]
+    [HttpPost("ImportarLancamentosExtratoItauCSV/{idCategoria:int}")]
     [Produces("application/json")]
-    public async Task<IActionResult> ImportarDespeasExtratoItauCSV(IFormFile arquivo, int idCategoria)
+    public async Task<IActionResult> ImportarLancamentosExtratoItauCSV(IFormFile arquivo, int idCategoria)
     {
         // criar uma instância do Workbook
         IWorkbook workbook;
@@ -66,7 +66,7 @@ public class DespesasController : ControllerBase
             workbook = new HSSFWorkbook(stream);
         }
         
-        await _service.ImportarDespeasExtratoItauCSV(workbook, idCategoria);
+        await _service.ImportarLancamentosExtratoItauCSV(workbook, idCategoria);
         
         return Ok();
     }
@@ -95,22 +95,22 @@ public class DespesasController : ControllerBase
         }
     }
 
-    [HttpPut("AtualizarDespesa")]
+    [HttpPut("AtualizarLancamento")]
     [Produces("application/json")]
-    public async Task<ActionResult<Despesa>> AtualizarDespesa(Despesa despesa)
+    public async Task<ActionResult<Lancamento>> AtualizarLancamento(Lancamento lancamento)
     {
-        await _service.AtualizarDespesa(despesa);
-        return Ok(despesa);
+        await _service.AtualizarLancamento(lancamento);
+        return Ok(lancamento);
     }
 
-    [HttpDelete("DeletarDespesa/{id:int}")]
+    [HttpDelete("DeletarLancamento/{id:int}")]
     [Produces("application/json")]
-    public async Task<IActionResult> DeletarDespesa(int id)
+    public async Task<IActionResult> DeletarLancamento(int id)
     {
         try
         {
-            Despesa despesa = await _repository.GetEntityById(id);
-            await _repository.Delete(despesa);
+            Lancamento lancamento = await _repository.GetEntityById(id);
+            await _repository.Delete(lancamento);
             return Ok(true);
         }
         catch (Exception)

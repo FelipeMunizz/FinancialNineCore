@@ -17,7 +17,7 @@ namespace Infra.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "7.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -113,7 +113,7 @@ namespace Infra.Migrations
                     b.ToTable("Categoria");
                 });
 
-            modelBuilder.Entity("Entities.Entidades.Despesa", b =>
+            modelBuilder.Entity("Entities.Entidades.Lancamento", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -152,7 +152,7 @@ namespace Infra.Migrations
                     b.Property<bool>("Pago")
                         .HasColumnType("bit");
 
-                    b.Property<int>("TipoDespesa")
+                    b.Property<int>("TipoLancamento")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Valor")
@@ -162,7 +162,7 @@ namespace Infra.Migrations
 
                     b.HasIndex("IdCategoria");
 
-                    b.ToTable("Despesa");
+                    b.ToTable("Lancamento");
                 });
 
             modelBuilder.Entity("Entities.Entidades.SistemaFinanceiro", b =>
@@ -375,7 +375,7 @@ namespace Infra.Migrations
                     b.Navigation("SistemaFinanceiro");
                 });
 
-            modelBuilder.Entity("Entities.Entidades.Despesa", b =>
+            modelBuilder.Entity("Entities.Entidades.Lancamento", b =>
                 {
                     b.HasOne("Entities.Entidades.Categoria", "Categoria")
                         .WithMany()
