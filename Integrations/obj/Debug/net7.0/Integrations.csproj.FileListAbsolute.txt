@@ -15,3 +15,20 @@ D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.dl
 D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\refint\Integrations.dll
 D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.pdb
 D:\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\ref\Integrations.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Integrations.deps.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Integrations.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Integrations.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Domain.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Entities.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Domain.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\bin\Debug\net7.0\Entities.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.csproj.AssemblyReference.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.AssemblyInfoInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.AssemblyInfo.cs
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.csproj.CopyComplete
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\refint\Integrations.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\Integrations.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\Projetos\FinancialNineCore\back\Integrations\obj\Debug\net7.0\ref\Integrations.dll

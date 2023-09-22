@@ -11,4 +11,5 @@ public interface ILancamentoServico
     Task ImportarLancamentosExtratoBradescoCSV(StreamReader streamReader, int idCategoria);
     Task ImportarLancamentosExtratoItauCSV(IWorkbook workbook, int idCategoria);
     Task ImportarNotaFiscal(string xml, int categoria);
+    Task ImportarContaLancamento(DadosEnel Enel);
 }
