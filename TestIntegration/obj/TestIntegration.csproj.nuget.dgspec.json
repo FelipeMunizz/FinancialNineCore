@@ -1,82 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj": {}
+    "D:\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj": {
+    "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Domain\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {
-              "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "NPOI": {
-              "target": "Package",
-              "version": "[2.6.2, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
+        "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Entities\\obj\\",
+        "outputPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -136,18 +71,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj": {
+    "D:\\Projetos\\FinancialNineCore\\back\\Integration\\Integration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj",
-        "projectName": "TestIntegration",
-        "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj",
+        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\back\\Integration\\Integration.csproj",
+        "projectName": "Integration",
+        "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Integration\\Integration.csproj",
         "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\TestIntegration\\obj\\",
+        "outputPath": "D:\\Projetos\\FinancialNineCore\\back\\Integration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,11 +99,70 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Domain\\Domain.csproj"
+              "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj",
+        "projectName": "TestIntegration",
+        "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj",
+        "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\FinancialNineCore\\back\\TestIntegration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Entities\\Entities.csproj"
+              "D:\\Projetos\\FinancialNineCore\\back\\Integration\\Integration.csproj": {
+                "projectPath": "D:\\Projetos\\FinancialNineCore\\back\\Integration\\Integration.csproj"
               }
             }
           }
@@ -220,7 +214,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9,6 +9,7 @@
       "Domain/1.0.0": {
         "dependencies": {
           "Entities": "1.0.0",
+          "Integration": "1.0.0",
           "NPOI": "2.6.2"
         },
         "runtime": {
@@ -477,6 +478,14 @@
         "runtime": {
           "Entities.dll": {}
         }
+      },
+      "Integration/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "runtime": {
+          "Integration.dll": {}
+        }
       }
     }
   },
@@ -781,6 +790,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Integration/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,6 +1,5 @@
-﻿using Domain.Interfaces.InterfaceServicos;
-using Domain.Servicos;
-using Entities.Entidades;
+﻿using Entities.Entidades;
+using Integration.Enel;
 
 namespace TestIntegration;
 
@@ -17,6 +16,7 @@ public class EnelTest
             Senha = "Veve2023@sofia"
         };
 
-        await new LancamentoServico().ImportarContaLancamento(dados);
+        Enelintegracao enel = new Enelintegracao();
+        await enel.ImportarContaLacamento(dados);
     }
 }
