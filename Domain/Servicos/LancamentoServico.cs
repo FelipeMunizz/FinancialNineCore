@@ -4,6 +4,8 @@ using Entities.Entidades;
 using Entities.Enums;
 using Entities.ModelsIntegration;
 using NPOI.SS.UserModel;
+using System.Net;
+using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Transactions;
 using System.Xml;
@@ -78,13 +80,6 @@ public class LancamentoServico : ILancamentoServico
 
     public async Task ImportarContaLancamento(DadosEnel dadosEnel)
     {
-        string url = $"{_baseUrlEnel}/api/firebase/login";
-        HttpClient client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Accept", "application/json, text/plain, */*");
-        client.DefaultRequestHeaders.Add("authority", _baseUrlEnel);
-        client.DefaultRequestHeaders.Add("origin", _baseUrlEnel);
-        client.DefaultRequestHeaders.Add("referer", _baseUrlEnel);
-        client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36");
 
         EnelLogin enelLogin = new EnelLogin
         {
@@ -92,13 +87,36 @@ public class LancamentoServico : ILancamentoServico
             I_PASSWORD = dadosEnel.Senha
         };
 
-        var request = await client.PostAsync(new Uri(url), new StringContent(JsonSerializer.Serialize(enelLogin)));
+        var handler = new HttpClientHandler();
+        handler.AutomaticDecompression = ~DecompressionMethods.None;
+        using (var httpClient = new HttpClient(handler))
+        {
+            using (var request = new HttpRequestMessage(new HttpMethod("POST"), $"{_baseUrlEnel}/api/firebase/login"))
+            {
+                request.Headers.TryAddWithoutValidation("authority", "portalhome.eneldistribuicaosp.com.br");
+                request.Headers.TryAddWithoutValidation("accept", "application/json, text/plain, */*");
+                request.Headers.TryAddWithoutValidation("accept-language", "pt-BR,pt;q=0.9,en;q=0.8");
+                request.Headers.TryAddWithoutValidation("sec-ch-ua-mobile", "?0");
+                request.Headers.TryAddWithoutValidation("sec-ch-ua-platform", "Windows");
+                request.Headers.TryAddWithoutValidation("sec-fetch-dest", "empty");
+                request.Headers.TryAddWithoutValidation("sec-fetch-mode", "cors");
+                request.Headers.TryAddWithoutValidation("sec-fetch-site", "same-origin");
+                request.Headers.TryAddWithoutValidation("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36");
+
+                request.Content = new StringContent(JsonSerializer.Serialize(enelLogin));
+                request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json;charset=UTF-8");
+
+                var response = await httpClient.SendAsync(request);
+                string content = await response.Content.ReadAsStringAsync();
+                ReturnLoginEnel token = JsonSerializer.Deserialize<ReturnLoginEnel>(content);
+            }
+        }
     }
 
     public async Task ImportarLancamentosExtratoBradescoCSV(StreamReader streamReader, int idCategoria)
     {
         int n;
-        List<Lancamento> lancamentosDespesas= new List<Lancamento>();
+        List<Lancamento> lancamentosDespesas = new List<Lancamento>();
         List<Lancamento> lancamentosReceitas = new List<Lancamento>();
         using (TransactionScope scope = new TransactionScope())
         {
