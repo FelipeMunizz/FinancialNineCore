@@ -18,6 +18,7 @@ public class Enelintegracao
         ReturnLoginEnel token = new ReturnLoginEnel();
         GetLoginV2 loginV2 = new GetLoginV2();
         ReturnInstalacao instalacao = new ReturnInstalacao();
+        ReturnVerifyToken verificao = new ReturnVerifyToken();
         EnelLogin enelLogin = new EnelLogin
         {
             I_EMAIL = dadosEnel.Login,
@@ -73,6 +74,8 @@ public class Enelintegracao
 
                     var response = await httpClient.SendAsync(request);
                     string content = await response.Content.ReadAsStringAsync();
+
+                    verificao = JsonSerializer.Deserialize<ReturnVerifyToken>(content);
                 }
 
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), $"{_baseUrlEnel}/api/sap/getloginv2"))
