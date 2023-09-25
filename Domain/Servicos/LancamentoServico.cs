@@ -2,9 +2,8 @@
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
 using Entities.Enums;
-using Entities.ModelsIntegration;
+using Integration.Enel;
 using NPOI.SS.UserModel;
-using System.Text.Json;
 using System.Transactions;
 using System.Xml;
 
@@ -13,11 +12,6 @@ namespace Domain.Servicos;
 public class LancamentoServico : ILancamentoServico
 {
     private readonly InterfaceLancamento _lancamentos;
-    private string _baseUrlEnel = "https://portalhome.eneldistribuicaosp.com.br";
-
-    public LancamentoServico()
-    {
-    }
 
     public LancamentoServico(InterfaceLancamento lancamentos)
     {
@@ -78,27 +72,15 @@ public class LancamentoServico : ILancamentoServico
 
     public async Task ImportarContaLancamento(DadosEnel dadosEnel)
     {
-        string url = $"{_baseUrlEnel}/api/firebase/login";
-        HttpClient client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Accept", "application/json, text/plain, */*");
-        client.DefaultRequestHeaders.Add("authority", _baseUrlEnel);
-        client.DefaultRequestHeaders.Add("origin", _baseUrlEnel);
-        client.DefaultRequestHeaders.Add("referer", _baseUrlEnel);
-        client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36");
-
-        EnelLogin enelLogin = new EnelLogin
-        {
-            I_EMAIL = dadosEnel.Login,
-            I_PASSWORD = dadosEnel.Senha
-        };
-
-        var request = await client.PostAsync(new Uri(url), new StringContent(JsonSerializer.Serialize(enelLogin)));
+        Enelintegracao enel = new Enelintegracao();
+        await enel.ImportarContaLacamento(dadosEnel);
+        return;
     }
 
     public async Task ImportarLancamentosExtratoBradescoCSV(StreamReader streamReader, int idCategoria)
     {
         int n;
-        List<Lancamento> lancamentosDespesas= new List<Lancamento>();
+        List<Lancamento> lancamentosDespesas = new List<Lancamento>();
         List<Lancamento> lancamentosReceitas = new List<Lancamento>();
         using (TransactionScope scope = new TransactionScope())
         {
