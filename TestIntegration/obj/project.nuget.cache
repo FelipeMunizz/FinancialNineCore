@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XurdpRTxE3yYxfJK6NESSexbgora0SgS6pP+f26FewGkx2LBQsspuymufydHZ7KF1gDRWeu0mEMNt9UYZqGMww==",
+  "dgSpecHash": "mHz7KVLfNwXfsAu2xdSMEZTKb50a40Zq2t/sugTvmVWElZKNeo+/AtxKZo72J6HNBWx9nd8KNNZEnZ6b/z9GOA==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\TestIntegration\\TestIntegration.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
