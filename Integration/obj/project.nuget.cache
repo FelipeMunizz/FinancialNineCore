@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vla13zFmxWf1JnXXMFeGfri5X7RPABepV84JH30mSZbIGUMXakZP74QhObkEpHgVErGw/8RaRzcKyHprWu0zDw==",
+  "dgSpecHash": "x3IsHnxUmHQRFxmnF48djiVJSghrkEQfp4im0+5XoSvgltvz1D0DkybraXOsBJwnRtVP/poBBFvmIfX7Aa4AnA==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\FinancialNineCore\\back\\Integration\\Integration.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\Projetos\\FinancialNineCore\\back\\Integration\\Integration.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.4\\microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",
