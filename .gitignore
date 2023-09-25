@@ -143,3 +143,8 @@
 /WebApi/bin/Debug/net7.0/Integration.dll
 /WebApi/bin/Debug/net7.0/Integration.pdb
 /WebApi/bin/Debug/net7.0/WebApi.deps.json
+/Integration/obj/Debug/net7.0/Integration.assets.cache
+/Integration/obj/Debug/net7.0/Integration.GeneratedMSBuildEditorConfig.editorconfig
+/TestIntegration/bin/Debug/net7.0/CoverletSourceRootsMapping
+/TestIntegration/obj/Debug/net7.0/TestIntegration.assets.cache
+/TestIntegration/obj/Debug/net7.0/TestIntegration.GeneratedMSBuildEditorConfig.editorconfig
