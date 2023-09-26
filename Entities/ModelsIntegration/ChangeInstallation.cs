@@ -2,7 +2,7 @@
 
 public class ChangeInstallation
 {
-    public string I_AMBIENTE { get; set; } = "PROD";
+    public string I_AMBIENTE { get; set; } = "PRD";
     public string I_ANLAGE { get; set; }
     public string I_BANDEIRA { get; set; } = "X";
     public string I_CANAL { get; set; } = "ZINIT";

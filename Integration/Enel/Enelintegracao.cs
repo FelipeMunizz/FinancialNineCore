@@ -12,6 +12,7 @@ public class Enelintegracao
 
     private string _baseUrlEnel = "https://portalhome.eneldistribuicaosp.com.br";
     private string _baseUrlGoogleApi = "https://www.googleapis.com/identitytoolkit/v3/relyingparty";
+    private string _token = string.Empty;
 
     public async Task ImportarContaLacamento(DadosEnel dadosEnel)
     {
@@ -116,6 +117,10 @@ public class Enelintegracao
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json;charset=UTF-8");
 
                     var response = await httpClient.SendAsync(request);
+
+                    if (response.Headers.TryGetValues("Authorization", out var authorizationValues))
+                        _token =  authorizationValues.FirstOrDefault();
+
                     string content = await response.Content.ReadAsStringAsync();
                     instalacao = JsonSerializer.Deserialize<ReturnInstalacao>(content);
                 }
@@ -129,10 +134,18 @@ public class Enelintegracao
                             changeInstallation = new ChangeInstallation
                             {
                                 I_ANLAGE = item.ANLAGE,
-                                I_VERTRAG = item.VERTRAG
+                                I_VERTRAG = instalacao.E_VERTRAG
                             };
-
-                            request.Headers.TryAddWithoutValidation("authorization", $"Bearer {loginV2.I_FBIDTOKEN}");
+                            request.Headers.TryAddWithoutValidation("authority", "portalhome.eneldistribuicaosp.com.br");
+                            request.Headers.TryAddWithoutValidation("accept", "application/json, text/plain, */*");
+                            request.Headers.TryAddWithoutValidation("accept-language", "pt-BR,pt;q=0.9,en;q=0.8");
+                            request.Headers.TryAddWithoutValidation("sec-ch-ua-mobile", "?0");
+                            request.Headers.TryAddWithoutValidation("sec-ch-ua-platform", "Windows");
+                            request.Headers.TryAddWithoutValidation("sec-fetch-dest", "empty");
+                            request.Headers.TryAddWithoutValidation("sec-fetch-mode", "cors");
+                            request.Headers.TryAddWithoutValidation("sec-fetch-site", "same-origin");
+                            request.Headers.TryAddWithoutValidation("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36");
+                            request.Headers.TryAddWithoutValidation("authorization", _token);
 
                             request.Content = new StringContent(JsonSerializer.Serialize(changeInstallation));
                             request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json;charset=UTF-8");

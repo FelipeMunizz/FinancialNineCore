@@ -3,6 +3,9 @@
 public class ReturnInstalacao
 {
     public List<Instalacao> ET_INST { get; set; }
+    public string I_FBIDTOKEN { get; set; }
+    public string I_USER_IP { get; set; }
+    public string E_VERTRAG {  get; set; }
 }
 
 public class Instalacao
