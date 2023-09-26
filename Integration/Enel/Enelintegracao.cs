@@ -19,6 +19,8 @@ public class Enelintegracao
         GetLoginV2 loginV2 = new GetLoginV2();
         ReturnInstalacao instalacao = new ReturnInstalacao();
         ReturnVerifyToken verificao = new ReturnVerifyToken();
+        ReturnTokenValidate returnTokenValidate = new ReturnTokenValidate();
+        ChangeInstallation changeInstallation = new ChangeInstallation();
         EnelLogin enelLogin = new EnelLogin
         {
             I_EMAIL = dadosEnel.Login,
@@ -54,12 +56,7 @@ public class Enelintegracao
                     var response = await httpClient.SendAsync(request);
                     string content = await response.Content.ReadAsStringAsync();
                     token = JsonSerializer.Deserialize<ReturnLoginEnel>(content);
-                }
-
-                loginV2 = new GetLoginV2
-                {
-                    I_FBIDTOKEN = token.token
-                };
+                }               
 
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), $"{_baseUrlGoogleApi}/verifyCustomToken?key={key}"))
                 {
@@ -78,14 +75,72 @@ public class Enelintegracao
                     verificao = JsonSerializer.Deserialize<ReturnVerifyToken>(content);
                 }
 
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), $"{_baseUrlGoogleApi}/getAccountInfo?key={key}"))
+                {
+                    var requestPayload = new
+                    {
+                        idToken = verificao.idToken
+                    };
+
+                    request.Content = new StringContent(JsonSerializer.Serialize(requestPayload));
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json;charset=UTF-8");
+
+                    var response = await httpClient.SendAsync(request);
+                }
+
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), $"https://securetoken.googleapis.com/v1/token?key={key}"))
+                {
+                    var formData = new Dictionary<string, string>
+                    {
+                        {"grant_type", "refresh_token" },
+                        {"refresh_token", verificao.refreshToken }
+                    };
+                    var content = new FormUrlEncodedContent(formData);
+
+                    request.Content = content;
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
+
+                    var response = await httpClient.SendAsync(request);
+                    string textResponse = await response.Content.ReadAsStringAsync();
+
+                    returnTokenValidate = JsonSerializer.Deserialize<ReturnTokenValidate>(textResponse);
+                }
+
                 using (var request = new HttpRequestMessage(new HttpMethod("POST"), $"{_baseUrlEnel}/api/sap/getloginv2"))
                 {
+                    loginV2 = new GetLoginV2
+                    {
+                        I_FBIDTOKEN = returnTokenValidate.access_token
+                    };
                     request.Content = new StringContent(JsonSerializer.Serialize(loginV2));
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json;charset=UTF-8");
 
                     var response = await httpClient.SendAsync(request);
                     string content = await response.Content.ReadAsStringAsync();
                     instalacao = JsonSerializer.Deserialize<ReturnInstalacao>(content);
+                }
+
+                foreach(var item in instalacao.ET_INST)
+                {
+                    if(dadosEnel.NumeroInstalacao == Convert.ToInt32(item.ANLAGE))
+                    {
+                        using (var request = new HttpRequestMessage(new HttpMethod("POST"), $"{_baseUrlEnel}/api/sap/changeinstallation"))
+                        {
+                            changeInstallation = new ChangeInstallation
+                            {
+                                I_ANLAGE = item.ANLAGE,
+                                I_VERTRAG = item.VERTRAG
+                            };
+
+                            request.Headers.TryAddWithoutValidation("authorization", $"Bearer {loginV2.I_FBIDTOKEN}");
+
+                            request.Content = new StringContent(JsonSerializer.Serialize(changeInstallation));
+                            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json;charset=UTF-8");
+
+                            var response = await httpClient.SendAsync(request);
+                            string content = await response.Content.ReadAsStringAsync();
+                        }
+                    }
                 }
             }            
         }

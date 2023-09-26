@@ -11,7 +11,7 @@ public class EnelTest
     {
         DadosEnel dados = new DadosEnel
         {
-            NumeroInstalacao = 1,
+            NumeroInstalacao = 0051020211,
             Login = "barreto-veronica@bol.com.br",
             Senha = "Veve2023@sofia"
         };
