@@ -2,7 +2,6 @@
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
 using Entities.Enums;
-using Integration.Enel;
 using NPOI.SS.UserModel;
 using System.Transactions;
 using System.Xml;
@@ -68,13 +67,6 @@ public class LancamentoServico : ILancamentoServico
             despesasNaoPagasMesAnterior,
             receitas
         };
-    }
-
-    public async Task ImportarContaLancamento(DadosEnel dadosEnel)
-    {
-        Enelintegracao enel = new Enelintegracao();
-        await enel.ImportarContaLacamento(dadosEnel);
-        return;
     }
 
     public async Task ImportarLancamentosExtratoBradescoCSV(StreamReader streamReader, int idCategoria)
